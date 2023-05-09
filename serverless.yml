@@ -1,0 +1,16 @@
+service: addPersonVersion2
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  role: arn:aws:iam::233784350905:role/addPersonAdmin
+  region: us-east-1
+
+functions:
+  addPerson:
+    handler: src/createUser.handler
+    events:
+      - http:
+          path: /createuser
+          method: post
+
