@@ -1,8 +1,9 @@
-export const formatJSONResponse = ({ // accept an object
+export const formatJSONResponse = ({
+     // accept an object as an argument
     statusCode = 200,
     data = {},
     headers,
-  }: {  // of this type
+  }: {  
     statusCode?: number;
     data?: any;
     // accept two keys both with a "string" value

@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.formatJSONResponse = void 0;
-const formatJSONResponse = ({ // accept an object
+const formatJSONResponse = ({ 
+// accept an object as an argument
 statusCode = 200, data = {}, headers, }) => {
     return {
         statusCode,
