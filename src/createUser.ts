@@ -21,8 +21,11 @@ export const handler = async (event: any = {}) => {
         });
         // if not successfull, return error
     } catch(error){
-        return {
-            error
-        }
+        return formatJSONResponse({
+            statusCode: 502,
+            data: {
+                error
+            }
+        })
     }
 };

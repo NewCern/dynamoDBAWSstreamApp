@@ -29,9 +29,12 @@ const handler = (event = {}) => __awaiter(void 0, void 0, void 0, function* () {
         // if not successfull, return error
     }
     catch (error) {
-        return {
-            error
-        };
+        return (0, apiGateway_1.formatJSONResponse)({
+            statusCode: 502,
+            data: {
+                error
+            }
+        });
     }
 });
 exports.handler = handler;
